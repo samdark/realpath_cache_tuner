@@ -31,9 +31,10 @@
     <h1>realpath() cache size tuner</h1>
 
     <ol>
-        <li>Read <a href="https://jpauli.github.io/2014/06/30/realpath-cache.html">Julien Pauli article</a></li>
+        <li>Read <a href="https://jpauli.github.io/2014/06/30/realpath-cache.html">Julien Pauli article</a>.</li>
         <li>Warm up cache (visit all your project pages).</li>
         <li>Run this script.</li>
+        <li>Adjust values in php.ini.</li>
     </ol>
 
     <h2>Cache size</h2>
