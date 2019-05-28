@@ -9,16 +9,19 @@
     function iniSizeToBytes($value)
     {
         $value = trim($value);
-        $last = strtolower($value[strlen($value) - 1]);
-        switch($last) {
-            case 'g':
-                $value *= 1024;
-            case 'm':
-                $value *= 1024;
-            case 'k':
-                $value *= 1024;
+        $last = strtolower(substr($value, -1));
+        if (in_array($last, ['g', 'm', 'k'], true)) {
+            $value = substr($value, 0, strlen($value) - 1);
+            
+            switch ($last) {
+                case 'g':
+                    $value *= 1024;
+                case 'm':
+                    $value *= 1024;
+                case 'k':
+                    $value *= 1024;
+            }
         }
-
         return $value;
     }
 
